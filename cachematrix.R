@@ -1,9 +1,9 @@
-													# make a cache matrix from a given matrix
+						# make a cache matrix from a given matrix
 
 makeCacheMatrix <- function(x = matrix()) {
   
-													# initialize the cache Matrix 'cacheMatrix'
-												    # assign the value NULL for the first initialization
+						# initialize the cache Matrix 'cacheMatrix'
+						# assign the value NULL for the first initialization
   
   cacheMatrix <- NULL
   setMatrix <- function(y) {
@@ -14,7 +14,7 @@ makeCacheMatrix <- function(x = matrix()) {
   getMatrix <- function() x
   setCache <- function(inverse) cacheMatrix <<- inverse
   
-                                                    # Define the Function named 'getCache' that will return the cached inverse of 'x'
+                                                 # Define the Function named 'getCache' that will return the cached inverse of 'x'
     
   getCache <- function() cacheMatrix
   
@@ -28,13 +28,13 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
   
-                                                    # 'cacheSolve' return the inverse of a given matrix utilizing the cache
+                                                  # 'cacheSolve' return the inverse of a given matrix utilizing the cache
   
    cacheMatrix <- x$getCache()
   
    
   
-  if (!is.null(cacheMatrix)) {                      # if the content is not null then: return the result
+  if (!is.null(cacheMatrix)) {                    # if the content is not null then: return the result
     message("loading cache matrix...")
     return(cacheMatrix)
   }
